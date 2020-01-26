@@ -1,7 +1,3 @@
-//window.addEventListener('load', init);
-
-
-
 
 const levels = {
   easy: 5,
@@ -63,11 +59,6 @@ start.addEventListener('click', function(){
 
   setInterval(checkStatus, 50);
 })
-
-//function init() {
-  
-  
-
 
 function startMatch() {
   if (matchWords()) {
