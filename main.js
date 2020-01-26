@@ -1,4 +1,4 @@
-window.addEventListener('load', init);
+//window.addEventListener('load', init);
 
 
 
@@ -10,7 +10,7 @@ const levels = {
 };
 
 
-const currentLevel = levels.medium;
+const currentLevel = levels.easy;
 
 let time = currentLevel;
 let score = 0;
@@ -23,7 +23,7 @@ const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
-
+const start = document.querySelector('.start');
 const words = [
   'hat',
   'river',
@@ -52,9 +52,8 @@ const words = [
   'definition'
 ];
 
-function init() {
-  
-  seconds.innerHTML = currentLevel;
+start.addEventListener('click', function(){
+    seconds.innerHTML = currentLevel;
   
   showWord(words);
   
@@ -63,7 +62,11 @@ function init() {
   setInterval(countdown, 1000);
 
   setInterval(checkStatus, 50);
-}
+})
+
+//function init() {
+  
+  
 
 
 function startMatch() {
